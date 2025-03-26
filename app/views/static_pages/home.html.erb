@@ -1,0 +1,6 @@
+<h1> Photo Fetcher </h1>
+<%= form_with url: photos_path, method: :get, local: true do |form|%>
+  <%=  form.label :username, "Enter Unsplash User :"   %>
+  <%= form.text_field :username%>
+  <%= form.submit "Get Photos" %>
+<%end %>

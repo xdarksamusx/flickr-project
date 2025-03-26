@@ -1,0 +1,4 @@
+<h1> Photos</h1>
+<% @photos.each do |photo| %>
+  <h4>  <%= link_to " Photo  #{photo.user.username}",  "https://unsplash.com/photos/#{photo.url}", target: "blank"  %> </h4>
+<%end%>

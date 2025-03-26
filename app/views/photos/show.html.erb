@@ -1,0 +1,19 @@
+<h1>Photo</h1>
+<% if @photo.present?%>
+  <strong> Photo ID:  </strong> <%= photo.id %>
+  <p>
+    <strong>
+      Uploaded by:
+    </strong>  <%= @photo.user&.username || "Unknown User"  %>
+  </p>
+  <p>
+    <strong> UnSplash Link :
+      <p>
+        <%= link_to "View on Unsplash", "https://unsplash.com/photos/#{@photo.url}", target: "_blank" %>
+      </p>
+    </strong>
+  </p>
+  <%= link_to "Back to Photos", photos_path%>
+<%else%>
+  <p> Photo not found</p>
+<%end%>
